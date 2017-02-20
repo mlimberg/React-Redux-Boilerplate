@@ -5,7 +5,9 @@ import AppContainer from '../../containers/AppContainer/AppContainer';
 export class App extends Component {
   constructor() {
     super();
-
+    this.state = {
+      name: ''
+    }
   }
 
   render() {
@@ -16,6 +18,9 @@ export class App extends Component {
         <button onClick={this.props.decrease.bind(this)}>
           Decrease
         </button>
+
+        <input onChange={(e) => {this.setState({ name: e.target.value })}}></input>
+        <button onClick={() => this.props.storeShit(this.state.name)}>Store Shit</button>
         {this.props.count}
       </div>
     )

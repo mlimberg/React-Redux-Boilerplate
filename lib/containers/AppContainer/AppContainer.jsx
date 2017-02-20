@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { increase, decrease } from '../../actions';
+import { increase, decrease, store } from '../../actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -9,6 +9,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     decrease: () => {
       dispatch(decrease(1))
+    },
+    storeShit: (name) => {
+      dispatch(store(name))
     }
   }
 }
