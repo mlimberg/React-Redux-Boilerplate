@@ -1,5 +1,5 @@
 {
-  "name": "walker-texas-rangerbox",
+  "name": "Bracket-Builder",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mlimberg/chuck-norris.git"
+    "url": "git+https://github.com/mlimberg/Bracket-Builder"
   },
   "keywords": [
-    "chuck",
-    "norris"
+    "Bracket",
+    "Builder"
   ],
   "author": "Mike Limberg",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mlimberg/chuck-norris/issues"
+    "url": "https://github.com/mlimberg/Bracket-Builder/issues"
   },
-  "homepage": "https://github.com/mlimberg/chuck-norris#readme",
+  "homepage": "https://github.com/mlimberg/Bracket-Builder#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -34,6 +34,9 @@
     "mocha": "^3.2.0",
     "node-sass": "^4.3.0",
     "react-addons-test-utils": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0",
     "sass-loader": "^4.1.1",
     "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
