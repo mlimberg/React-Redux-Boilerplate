@@ -27,8 +27,10 @@ export class Quiz extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ score: score })
-    }).then(res => res.json())
-    .then(res => this.props.quizResponse(res.score))
+    })
+      .then(res => res.json())
+      .then(res => this.props.quizResponse(res.score))
+      .then(() => this.setState({ submitted: true }))
   }
 
   render() {
@@ -44,10 +46,11 @@ export class Quiz extends Component {
 
     return(
       <div>
+        {this.state.submitted ? <Response closePopup={() => this.setState({ submitted: false })}/> : null}
+
           <h1 className='quiz-title'>{quizData.title}</h1>
           <div className='quiz-container'>
             {quizQuestions}
-            <Response />
             <button className='submit-btn' onClick={this.handleSubmit.bind(this)}>Submit</button>
           </div>
       </div>
