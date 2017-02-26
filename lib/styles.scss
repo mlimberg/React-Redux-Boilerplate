@@ -3,3 +3,13 @@
 // body {
 //   background-color: $variable-test;
 // }
+
+.mult-choice-answer {
+  display: block;
+}
+
+.radio-btn {
+  &:hover{
+    cursor: pointer;
+  }
+}
