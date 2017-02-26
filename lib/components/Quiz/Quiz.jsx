@@ -22,6 +22,7 @@ export class Quiz extends Component {
     return(
       <div>
         {quizQuestions}
+        <button className='submit-btn'>Submit</button>
       </div>
     )
   }

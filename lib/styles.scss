@@ -1,8 +1,17 @@
-// $variable-test: green;
-//
-// body {
-//   background-color: $variable-test;
-// }
+@import url('https://fonts.googleapis.com/css?family=Amiko|Gloria+Hallelujah|Sansita|Ubuntu');
+
+$font-1: 'Sansita', sans-serif;
+$font-2: 'Amiko', sans-serif;
+$font-3: 'Ubuntu', sans-serif;
+$font-4: 'Gloria Hallelujah', cursive;
+
+
+$button-background: #bada55;
+$button-color: peru;
+
+body {
+  font-family: $font-3;
+}
 
 .mult-choice-answer {
   display: block;
@@ -11,5 +20,28 @@
 .radio-btn {
   &:hover{
     cursor: pointer;
+  }
+}
+
+.submit-btn {
+  border: none;
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: $button-background;
+  color: $button-color;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px blue;
+  &:hover {
+    cursor: pointer;
+    background-color: $button-color;
+    color: $button-background
+  }
+  &:focus {
+    outline: none;
   }
 }

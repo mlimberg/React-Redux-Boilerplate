@@ -9,7 +9,7 @@ class Answers extends Component {
     }
   }
 
-  
+
 
   render() {
     const { answer } = this.state;
