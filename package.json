@@ -1,5 +1,5 @@
 {
-  "name": "Bracket-Builder",
+  "name": "Quizzer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,8 +12,6 @@
     "url": "git+https://github.com/mlimberg/Bracket-Builder"
   },
   "keywords": [
-    "Bracket",
-    "Builder"
   ],
   "author": "Mike Limberg",
   "license": "ISC",

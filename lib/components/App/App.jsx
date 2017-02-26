@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import AppContainer from '../../containers/AppContainer/AppContainer';
+import QuizContainer from '../../containers/QuizContainer/QuizContainer';
+import Quiz from '../Quiz/Quiz';
 
 export class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      name: ''
+      quizData: null
     }
+  }
+
+  componentWillMount() {
+    fetch('http://localhost:3001/quizzes/1')
+      .then(res => res.json())
+      .then(res => this.props.storeQuizData(res.quiz))
+      // .then(res => this.props.storeQuizData(res.quizzes[0]))
   }
 
   render() {
     return(
       <div>
-        <div>Hi der hey der ho der World!</div>
-        <button onClick={this.props.increase.bind(this)}>Increase</button>
-        <button onClick={this.props.decrease.bind(this)}>
-          Decrease
-        </button>
-
-        <input onChange={(e) => {this.setState({ name: e.target.value })}}></input>
-        <button onClick={() => this.props.storeShit(this.state.name)}>Store Shit</button>
-        {this.props.count}
+        <Quiz data={this.props.quizData}/>
       </div>
     )
   }
 }
 
-export default AppContainer(App);
+export default QuizContainer(App);
